@@ -56,6 +56,7 @@ public class BroncomMod
     {
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(ModItems.ENDERITE);
+            event.accept(ModItems.ENDERITE_SCRAP);
         }
     }
 

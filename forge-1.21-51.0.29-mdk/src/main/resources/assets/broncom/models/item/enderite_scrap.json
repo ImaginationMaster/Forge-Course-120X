@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "broncom:item/enderite"
+    "layer0": "broncom:item/enderite_scrap"
   }
 }
