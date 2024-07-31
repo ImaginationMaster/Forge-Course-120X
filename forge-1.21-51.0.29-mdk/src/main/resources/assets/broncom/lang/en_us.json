@@ -1,4 +1,8 @@
 {
  "item.broncom.enderite": "Enderite Ingot",
- "item.broncom.enderite_scrap": "Enderite Scrap"
+ "item.broncom.enderite_scrap": "Enderite Scrap",
+ "item.broncom.enderite_crystal": "Enderite Crystal",
+
+ "block.broncom.enderite_block": "Block of Enderite",
+ "block.broncom.enderite_crystal_block": "Block of Enderite Crystals"
 }

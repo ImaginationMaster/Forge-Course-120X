@@ -1,6 +1,7 @@
 package net.fred.broncom;
 
 import com.mojang.logging.LogUtils;
+import net.fred.broncom.block.ModBlocks;
 import net.fred.broncom.item.ModItems;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -36,6 +37,7 @@ public class BroncomMod
         modEventBus.addListener(this::commonSetup);
 
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
@@ -57,6 +59,11 @@ public class BroncomMod
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(ModItems.ENDERITE);
             event.accept(ModItems.ENDERITE_SCRAP);
+            event.accept(ModItems.ENDERITE_CRYSTAL);
+        }
+        if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
+            event.accept(ModBlocks.ENDERITE_BLOCK);
+            event.accept(ModBlocks.ENDERITE_CRYSTAL_BLOCK);
         }
     }
 
