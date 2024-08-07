@@ -1,3 +1,6 @@
 {
-  "item.a_random_mod.cheese": "Cheese"
+  "item.a_random_mod.cheese": "Cheese",
+  "item.a_random_mod.cheese_essence": "Cheese Essence",
+
+  "block.a_random_mod.cheese_block": "Block of Cheese"
 }

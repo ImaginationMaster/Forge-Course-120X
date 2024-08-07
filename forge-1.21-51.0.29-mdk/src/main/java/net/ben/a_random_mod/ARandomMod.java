@@ -1,6 +1,7 @@
 package net.ben.a_random_mod;
 
 import com.mojang.logging.LogUtils;
+import net.ben.a_random_mod.block.ModBlocks;
 import net.ben.a_random_mod.item.ModItems;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
@@ -30,6 +31,7 @@ public class ARandomMod
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
 
         // Register the commonSetup method for modloading
@@ -55,6 +57,11 @@ public class ARandomMod
     {
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(ModItems.CHEESE);
+            event.accept(ModItems.CHEESE_ESSENCE);
+        }
+
+        if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS){
+            event.accept(ModBlocks.CHEESE_BLOCK);
         }
     }
 
