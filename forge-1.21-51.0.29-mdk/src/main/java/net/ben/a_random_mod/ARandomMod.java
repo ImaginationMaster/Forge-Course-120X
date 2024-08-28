@@ -62,6 +62,8 @@ public class ARandomMod
 
         if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS){
             event.accept(ModBlocks.CHEESE_BLOCK);
+            event.accept(ModBlocks.CHEESE_ORE_BLOCK);
+
         }
     }
 

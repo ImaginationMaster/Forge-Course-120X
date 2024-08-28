@@ -1,0 +1,7 @@
+{
+  "variants" : {
+    "": {
+      "model" : "a_random_mod:block/cheese_ore_block"
+    }
+  }
+}

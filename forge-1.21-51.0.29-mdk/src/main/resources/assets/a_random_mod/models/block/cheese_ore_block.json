@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "a_random_mod:block/cheese_ore_block"
+  }
+}

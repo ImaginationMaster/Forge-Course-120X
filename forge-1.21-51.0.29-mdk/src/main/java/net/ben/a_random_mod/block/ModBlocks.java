@@ -23,6 +23,9 @@ public class ModBlocks {
     public static final RegistryObject<Block> CHEESE_BLOCK = registerBlock("cheese_block",
             () -> new Block(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_YELLOW).instrument(NoteBlockInstrument.DIDGERIDOO)
                     .requiresCorrectToolForDrops().strength(5.0F, 6.0F).sound(SoundType.SOUL_SAND)));
+ public static final RegistryObject<Block> CHEESE_ORE_BLOCK = registerBlock("cheese_ore_block",
+            () -> new Block(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_YELLOW).instrument(NoteBlockInstrument.DIDGERIDOO)
+                    .requiresCorrectToolForDrops().strength(5.0F, 6.0F).sound(SoundType.SOUL_SAND)));
 
 
 
