@@ -3,5 +3,7 @@
   "item.a_random_mod.cheese_essence": "Cheese Essence",
 
   "block.a_random_mod.cheese_block": "Block of Cheese",
-  "block.a_random_mod.cheese_ore_block": "Cheese Ore"
+  "block.a_random_mod.cheese_ore_block": "Cheese Ore",
+
+  "creativetab.course_tab": "Lunch Box"
 }

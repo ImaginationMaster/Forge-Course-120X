@@ -2,6 +2,7 @@ package net.ben.a_random_mod;
 
 import com.mojang.logging.LogUtils;
 import net.ben.a_random_mod.block.ModBlocks;
+import net.ben.a_random_mod.item.ModCreativeModeTabs;
 import net.ben.a_random_mod.item.ModItems;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
@@ -29,6 +30,8 @@ public class ARandomMod
     public ARandomMod()
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+
+        ModCreativeModeTabs.register(modEventBus);
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
