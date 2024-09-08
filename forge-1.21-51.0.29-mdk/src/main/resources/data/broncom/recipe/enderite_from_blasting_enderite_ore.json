@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 150,
+  "experience": 0.10,
+  "group": "enderite",
+  "ingredient": {
+    "item": "broncom:enderite_ore_block"
+  },
+  "result": {
+    "id": "broncom:enderite_crystal"
+  }
+}

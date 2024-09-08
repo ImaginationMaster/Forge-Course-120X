@@ -1,0 +1,20 @@
+{
+  "type" : "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "enderite",
+  "key": {
+    "E": {
+      "item": "broncom:enderite"
+    }
+  },
+  "pattern" :
+  [
+    "EEE",
+    "EEE",
+    "EEE"
+  ],
+  "result": {
+    "id": "broncom:enderite_block"
+  }
+}
+

@@ -4,5 +4,8 @@
  "item.broncom.enderite_crystal": "Enderite Crystal",
 
  "block.broncom.enderite_block": "Block of Enderite",
- "block.broncom.enderite_crystal_block": "Block of Enderite Crystals"
+ "block.broncom.enderite_crystal_block": "Block of Enderite Crystals",
+ "block.broncom.enderite_ore_block": "Enderite Ore",
+
+ "creativetab.broncom": "Broncom Ores"
 }

@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "enderite",
+  "ingredients": [
+    {
+      "item": "broncom:enderite_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "broncom:enderite"
+  }
+}

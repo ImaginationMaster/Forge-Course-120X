@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 250,
+  "experience": 0.10,
+  "group": "enderite",
+  "ingredient": {
+    "item": "broncom:enderite_crystal"
+  },
+  "result": {
+    "id": "broncom:enderite_scrap"
+  }
+}

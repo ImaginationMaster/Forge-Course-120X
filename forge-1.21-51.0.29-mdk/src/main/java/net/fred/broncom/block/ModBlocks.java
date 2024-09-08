@@ -2,12 +2,12 @@ package net.fred.broncom.block;
 
 import net.fred.broncom.BroncomMod;
 import net.fred.broncom.item.ModItems;
+import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.AmethystBlock;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -20,13 +20,16 @@ public class ModBlocks {
           DeferredRegister.create(ForgeRegistries.BLOCKS, BroncomMod.MOD_ID);
 
     public static final RegistryObject<Block> ENDERITE_BLOCK = registerBlock( "enderite_block",
-            ()-> new Block(BlockBehaviour.Properties.of().destroyTime(7.0F).explosionResistance(100.0F).friction(0.1F).requiresCorrectToolForDrops()));
+            ()-> new Block(BlockBehaviour.Properties.of().requiresCorrectToolForDrops().strength(6.5F, 200.0F ).friction(0.6F).instrument(NoteBlockInstrument.IRON_XYLOPHONE).sound(SoundType.NETHERITE_BLOCK)));
 
     public static final RegistryObject<Block> ENDERITE_CRYSTAL_BLOCK = registerBlock( "enderite_crystal_block",
-            ()-> new Block(BlockBehaviour.Properties.of().destroyTime(6.0F).explosionResistance(90.0F).friction(0.3F).requiresCorrectToolForDrops()));
+            ()-> new Block(BlockBehaviour.Properties.of().requiresCorrectToolForDrops().strength(6.3F, 190.0F ).friction(0.6F).instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.AMETHYST)));
 
+    public static final RegistryObject<Block> ENDERITE_ORE_BLOCK = registerBlock( "enderite_ore_block",
+            ()-> new DropExperienceBlock(UniformInt.of(2,5), BlockBehaviour.Properties.ofFullCopy(Blocks.STONE).strength(6.4F).requiresCorrectToolForDrops()));
 
     private static <T extends Block>  RegistryObject<T> registerBlock(String name, Supplier<T> block) {
+
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn);
        return toReturn;

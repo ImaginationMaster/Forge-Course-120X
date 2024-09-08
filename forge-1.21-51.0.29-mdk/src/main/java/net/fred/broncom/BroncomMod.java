@@ -2,8 +2,8 @@ package net.fred.broncom;
 
 import com.mojang.logging.LogUtils;
 import net.fred.broncom.block.ModBlocks;
+import net.fred.broncom.item.ModCreativeModTabs;
 import net.fred.broncom.item.ModItems;
-import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -22,16 +22,15 @@ import org.slf4j.Logger;
 public class BroncomMod
 {
     // Define mod id in a common place for everything to reference
-
-
-
-     public static final String MOD_ID = "broncom";
+    public static final String MOD_ID = "broncom";
     // Directly reference a slf4j logger
     private static final Logger LOGGER = LogUtils.getLogger();
 
     public BroncomMod()
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+
+        ModCreativeModTabs.register(modEventBus);
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
@@ -53,7 +52,7 @@ public class BroncomMod
     {
     }
 
-    // Add the example block item to the building blocks tab
+    // Add the example block item to the building block tab
     private void addCreative(BuildCreativeModeTabContentsEvent event)
     {
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
@@ -64,6 +63,7 @@ public class BroncomMod
         if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
             event.accept(ModBlocks.ENDERITE_BLOCK);
             event.accept(ModBlocks.ENDERITE_CRYSTAL_BLOCK);
+            event.accept(ModBlocks.ENDERITE_ORE_BLOCK);
         }
     }
 

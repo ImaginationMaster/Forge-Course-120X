@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "broncom:enderite_crystal_block",
+    "broncom:enderite_ore_block",
+    "broncom:enderite_block"
+  ]
+}
