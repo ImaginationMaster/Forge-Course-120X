@@ -2,14 +2,12 @@
  "item.broncom.enderite": "Enderite Ingot",
  "item.broncom.enderite_scrap": "Enderite Scrap",
  "item.broncom.enderite_crystal": "Enderite Crystal",
- "item.broncom.orb_of_sight" : "Orb of Site",
  "item.broncom.smood" : "Smood",
- "item.broncom.ultra_coal" : "Ultra Coal",
+ "item.broncom.orb_of_sight" : "Orb of Site",
 
  "block.broncom.enderite_block": "Block of Enderite",
  "block.broncom.enderite_crystal_block": "Block of Enderite Crystals",
  "block.broncom.enderite_ore_block": "Enderite Ore",
- "block.broncom.bing_block": "Bing Block",
 
  "creativetab.broncom": "Broncom",
 

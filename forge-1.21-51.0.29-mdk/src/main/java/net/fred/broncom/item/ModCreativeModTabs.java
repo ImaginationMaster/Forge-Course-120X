@@ -21,10 +21,14 @@ public static final RegistryObject<CreativeModeTab> BRONCOM_ORES = CREATIVE_MODE
                     output.accept(ModItems.ENDERITE.get());
                     output.accept(ModItems.ENDERITE_SCRAP.get());
                     output.accept(ModItems.ENDERITE_CRYSTAL.get());
-
                     output.accept(ModBlocks.ENDERITE_BLOCK.get());
                     output.accept(ModBlocks.ENDERITE_CRYSTAL_BLOCK.get());
                     output.accept(ModBlocks.ENDERITE_ORE_BLOCK.get());
+
+                    output.accept(ModBlocks.BING_BLOCK.get());
+                    output.accept(ModItems.SMOOD.get());
+                    output.accept(ModItems.ORB_OF_SIGHT.get());
+                    output.accept(ModItems.ULTRA_COAL.get());
                 }).build());
 
     public static void register(IEventBus eventBus) {

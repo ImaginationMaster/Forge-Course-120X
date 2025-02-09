@@ -1,6 +1,7 @@
 package net.fred.broncom.block;
 
 import net.fred.broncom.BroncomMod;
+import net.fred.broncom.block.custom.bing_block;
 import net.fred.broncom.item.ModItems;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
@@ -26,7 +27,11 @@ public class ModBlocks {
             ()-> new Block(BlockBehaviour.Properties.of().requiresCorrectToolForDrops().strength(6.3F, 190.0F ).friction(0.6F).instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.AMETHYST)));
 
     public static final RegistryObject<Block> ENDERITE_ORE_BLOCK = registerBlock( "enderite_ore_block",
-            ()-> new DropExperienceBlock(UniformInt.of(2,5), BlockBehaviour.Properties.ofFullCopy(Blocks.STONE).strength(6.4F).requiresCorrectToolForDrops()));
+            ()-> new DropExperienceBlock(UniformInt.of(2,5), BlockBehaviour.Properties.ofFullCopy(Blocks.END_STONE).strength(6.4F).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> BING_BLOCK = registerBlock( "bing_block",
+            ()-> new bing_block(BlockBehaviour.Properties.of().requiresCorrectToolForDrops().strength(0.1F, 0.1F ).friction(0.6F).instrument(NoteBlockInstrument.COW_BELL).sound(SoundType.SAND)));
+
 
     private static <T extends Block>  RegistryObject<T> registerBlock(String name, Supplier<T> block) {
 
@@ -37,6 +42,8 @@ public class ModBlocks {
 
     private static <T extends Block> RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block){
        return ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
+
+
     }
 
 
