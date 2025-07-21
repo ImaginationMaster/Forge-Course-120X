@@ -20,6 +20,7 @@ public class ModCreativeModeTabs {
                     .displayItems((displayParameters, output) -> {
                         output.accept(ModItems.CHEESE.get());
                         output.accept(ModItems.CHEESE_ESSENCE.get());
+                        output.accept(ModItems.LOOKY_LOOKY.get());
                         output.accept(ModBlocks.CHEESE_BLOCK.get());
                         output.accept(ModBlocks.CHEESE_ORE_BLOCK.get());
                     }).build());

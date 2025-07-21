@@ -18,9 +18,10 @@ public class Looky_looky extends Item {
 
     @Override
     public InteractionResult useOn(UseOnContext pContext) {
+        Player player = pContext.getPlayer();
         if (!pContext.getLevel().isClientSide()){
             BlockPos positionClicked = pContext.getClickedPos();
-            Player player = pContext.getPlayer();
+
             boolean foundBlock = false;
             for (int i = 0; i <= positionClicked.getY() + 64; i++) {
                 BlockState blockState = pContext.getLevel().getBlockState(positionClicked.below(i));
@@ -33,15 +34,15 @@ public class Looky_looky extends Item {
             }
 
             if(!foundBlock)  {
-                outputNoValuableFound(player);
+                if (player != null)
+                {
+                    outputNoValuableFound(player);
+                }
             }
         }
-
-        pContext.getItemInHand().hurtAndBreak(1, pContext.getPlayer(),
-                player -> player.broadcastBreakEvent(player.get)
-
-                );
-
+        if (player != null) {
+            pContext.getItemInHand().hurtAndBreak(1, player, player.getEquipmentSlotForItem(player.getItemInHand(player.getUsedItemHand())));
+        }
         return InteractionResult.SUCCESS;
     }
 
