@@ -2,9 +2,12 @@ package net.ben.a_random_mod.block;
 
 import net.ben.a_random_mod.ARandomMod;
 import net.ben.a_random_mod.item.ModItems;
+import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.DropExperienceBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
@@ -22,11 +25,9 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> CHEESE_BLOCK = registerBlock("cheese_block",
             () -> new Block(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_YELLOW).instrument(NoteBlockInstrument.DIDGERIDOO)
-                    .requiresCorrectToolForDrops().strength(5.0F, 6.0F).sound(SoundType.SOUL_SAND)));
- public static final RegistryObject<Block> CHEESE_ORE_BLOCK = registerBlock("cheese_ore_block",
-            () -> new Block(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_YELLOW).instrument(NoteBlockInstrument.DIDGERIDOO)
-                    .requiresCorrectToolForDrops().strength(5.0F, 6.0F).sound(SoundType.SOUL_SAND)));
-
+                    .requiresCorrectToolForDrops().strength(0.5F, 6.0F).sound(SoundType.SOUL_SAND)));
+    public static final RegistryObject<Block> CHEESE_ORE_BLOCK = registerBlock( "cheese_ore_block",
+            ()-> new DropExperienceBlock(UniformInt.of(2,5), BlockBehaviour.Properties.ofFullCopy(Blocks.END_STONE).strength(0.5F).requiresCorrectToolForDrops()));
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block){

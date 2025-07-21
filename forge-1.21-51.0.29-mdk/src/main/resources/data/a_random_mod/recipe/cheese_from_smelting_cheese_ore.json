@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.1,
+  "group": "cheese",
+  "ingredient": {
+    "item": "a_random_mod:cheese_ore"
+  },
+  "result": {
+    "id": "a_random_mod:cheese"
+  }
+}

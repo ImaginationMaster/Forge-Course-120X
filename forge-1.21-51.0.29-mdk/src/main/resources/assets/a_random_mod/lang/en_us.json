@@ -5,5 +5,7 @@
   "block.a_random_mod.cheese_block": "Block of Cheese",
   "block.a_random_mod.cheese_ore_block": "Cheese Ore",
 
-  "creativetab.course_tab": "Lunch Box"
+  "creativetab.course_tab": "Lunch Box",
+
+  "item.mccourse.metal_detector.no_valubles": "no valuables found"
 }

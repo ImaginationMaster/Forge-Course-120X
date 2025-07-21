@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "cheese",
+  "key": {
+    "C": {
+      "item": "a_random_mod:cheese"
+    }
+  },
+  "pattern":
+  [
+    "CCC",
+    "CCC",
+    "CCC"
+  ],
+  "result":{
+    "id":  "a_random_mod:cheese_block"
+  }
+}

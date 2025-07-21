@@ -1,6 +1,7 @@
 package net.ben.a_random_mod.item;
 
 import net.ben.a_random_mod.ARandomMod;
+import net.ben.a_random_mod.item.custom.Looky_looky;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -16,6 +17,11 @@ public class ModItems {
 
     public static final RegistryObject<Item> CHEESE_ESSENCE = ITEMS.register("cheese_essence",
             () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> LOOKY_LOOKY = ITEMS.register("looky_looky",
+            () -> new Looky_looky(new Item.Properties().durability(512)));
+
+
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
