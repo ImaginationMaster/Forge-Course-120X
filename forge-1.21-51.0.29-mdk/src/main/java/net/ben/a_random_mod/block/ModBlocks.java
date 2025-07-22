@@ -1,6 +1,7 @@
 package net.ben.a_random_mod.block;
 
 import net.ben.a_random_mod.ARandomMod;
+import net.ben.a_random_mod.block.custom.BeatlesBlock;
 import net.ben.a_random_mod.item.ModItems;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
@@ -29,6 +30,9 @@ public class ModBlocks {
     public static final RegistryObject<Block> CHEESE_ORE_BLOCK = registerBlock( "cheese_ore_block",
             ()-> new DropExperienceBlock(UniformInt.of(2,5), BlockBehaviour.Properties.ofFullCopy(Blocks.END_STONE).strength(0.5F).requiresCorrectToolForDrops()));
 
+    public static final RegistryObject<Block> BEATLES_BLOCK = registerBlock("beatles_block",
+            () -> new BeatlesBlock(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_YELLOW).instrument(NoteBlockInstrument.DIDGERIDOO)
+                    .requiresCorrectToolForDrops().strength(0.5F, 6.0F).sound(SoundType.SOUL_SAND)));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block){
         RegistryObject<T> toReturn = BLOCKS.register(name,block);

@@ -21,6 +21,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.CHEESE.get());
                         output.accept(ModItems.CHEESE_ESSENCE.get());
                         output.accept(ModItems.LOOKY_LOOKY.get());
+                        output.accept(ModBlocks.BEATLES_BLOCK.get());
                         output.accept(ModBlocks.CHEESE_BLOCK.get());
                         output.accept(ModBlocks.CHEESE_ORE_BLOCK.get());
                     }).build());
