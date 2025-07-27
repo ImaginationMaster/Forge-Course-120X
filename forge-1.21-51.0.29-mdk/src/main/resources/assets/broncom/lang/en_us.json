@@ -13,6 +13,10 @@
 
  "creativetab.broncom": "Broncom",
 
- "item.broncom.orb_of_sight.no_valuables": "NO VALUABLES FOUND SORRY! (OOF)"
+ "item.broncom.orb_of_sight.no_valuables": "NO VALUABLES FOUND SORRY! (OOF)",
+
+ "tooltip.broncom.orb_of_sight.tooltip.shift": "Right Click on blocks to find Ores!",
+ "tooltip.broncom.orb_of_sight.tooltip": "Press §eSHIFT§r for more information",
+ "tooltip.broncom.bing_block": "makes bing sounds when §eRIGHT clicked§r or  §eSTOOD§r on."
 
 }
